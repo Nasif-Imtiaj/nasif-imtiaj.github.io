@@ -1,299 +1,640 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nasif Imtiaj | Lead Software Engineer</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --bg-color: #0d1117;
-            --text-main: #f0f6fc;
-            --text-muted: #8b949e;
-            --accent: #58a6ff;
-            --card-bg: #161b22;
-            --border-color: #30363d;
-        }
-
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: var(--bg-color);
-            color: var(--text-main);
-            line-height: 1.6;
-            padding: 0 20px;
-        }
-
-        .container {
-            max-width: 850px;
-            margin: 0 auto;
-            padding: 80px 0;
-        }
-
-        header {
-            margin-bottom: 60px;
-        }
-
-        h1 {
-            font-family: 'Space Grotesk', sans-serif;
-            font-size: 2.5rem;
-            font-weight: 700;
-            margin-bottom: 10px;
-            letter-spacing: -0.03em;
-        }
-
-        .subtitle {
-            font-size: 1.2rem;
-            color: var(--accent);
-            font-weight: 500;
-            margin-bottom: 20px;
-        }
-
-        p {
-            color: var(--text-muted);
-            font-size: 1.05rem;
-            max-width: 700px;
-        }
-
-        section {
-            margin-bottom: 50px;
-        }
-
-        h2 {
-            font-family: 'Space Grotesk', sans-serif;
-            font-size: 1.6rem;
-            border-bottom: 1px solid var(--border-color);
-            padding-bottom: 8px;
-            margin-bottom: 25px;
-            letter-spacing: -0.02em;
-        }
-
-        .grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 20px;
-        }
-
-        @media (max-width: 600px) {
-            .grid {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        .card {
-            background-color: var(--card-bg);
-            border: 1px solid var(--border-color);
-            border-radius: 8px;
-            padding: 24px;
-            transition: transform 0.2s ease, border-color 0.2s ease;
-        }
-
-        .card:hover {
-            border-color: var(--accent);
-        }
-
-        .card h3 {
-            font-size: 1.15rem;
-            margin-bottom: 5px;
-        }
-
-        .card .company {
-            font-size: 0.95rem;
-            color: var(--accent);
-            margin-bottom: 12px;
-            font-weight: 500;
-        }
-
-        .card ul {
-            list-style-type: none;
-        }
-
-        .card ul li {
-            color: var(--text-muted);
-            font-size: 0.95rem;
-            margin-bottom: 8px;
-            position: relative;
-            padding-left: 15px;
-        }
-
-        .card ul li::before {
-            content: "•";
-            color: var(--accent);
-            position: absolute;
-            left: 0;
-        }
-
-        .skills-container {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-        }
-
-        .skill-tag {
-            background-color: var(--card-bg);
-            border: 1px solid var(--border-color);
-            padding: 6px 14px;
-            border-radius: 20px;
-            font-size: 0.9rem;
-            color: var(--text-main);
-        }
-
-        .cp-metric {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 12px 0;
-            border-bottom: 1px dashed var(--border-color);
-        }
-
-        .cp-metric:last-child {
-            border-bottom: none;
-        }
-
-        .cp-platform {
-            font-weight: 500;
-        }
-
-        .cp-stat {
-            color: var(--accent);
-            font-weight: 600;
-        }
-
-        .social-links {
-            display: flex;
-            gap: 20px;
-            margin-top: 25px;
-        }
-
-        .social-links a {
-            display: inline-flex;
-            align-items: center;
-            text-decoration: none;
-            transition: opacity 0.2s;
-        }
-
-        .social-links a:hover {
-            opacity: 0.8;
-        }
-
-        .social-links img {
-            width: 32px;
-            height: 32px;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nasif Imtiaj — Software &amp; Mobile Engineer</title>
+  <meta name="description" content="Software &amp; Mobile Engineer based in Dhaka, Bangladesh. Building high-performance cross-platform mobile systems with hardware-accelerated video, OpenGL, FFmpeg, and Kotlin/Swift.">
+  <meta property="og:title" content="Nasif Imtiaj — Software &amp; Mobile Engineer">
+  <meta property="og:description" content="Software &amp; Mobile Engineer building high-performance cross-platform mobile systems with hardware-accelerated video, OpenGL, FFmpeg, and Kotlin/Swift.">
+  <meta property="og:url" content="https://nasif-imtiaj.github.io">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Nasif Imtiaj — Software &amp; Mobile Engineer">
+  <meta name="twitter:description" content="Software &amp; Mobile Engineer building high-performance cross-platform mobile systems.">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Sora:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
 
-    <div class="container">
-        <!-- Hero Section -->
-        <header>
-            <h1>Nasif Imtiaj</h1>
-            <!-- <!--[cite: 1] --> -->
-            <div class="subtitle">Lead Software Engineer & Mobile Systems Developer</div>
-            <!-- <!--[cite: 1] --> -->
-            <p>Focused on building highly optimized cross-platform mobile applications, low-level media processing engines, and fluid user experiences. Bridging complex mathematical logic with practical, production-ready systems.</p>
-        </header>
+<!-- ════════════ NAV ════════════ -->
+<nav>
+  <div class="nav-inner">
+    <a href="#" class="nav-logo">
+      <span class="nav-logo-main">nasifimtiaj</span><span class="nav-logo-dot">.</span><span class="nav-logo-ext">dev</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#achievement">Achievement</a></li>
+      <li><a href="#competitive">Competitive</a></li>
+      <!-- <li><a href="#publications">Publications</a></li> -->
+      <li><a href="#contact" class="nav-cta">Contact</a></li>
+    </ul>
+    <button class="nav-hamburger" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
 
-        <!-- Professional Experience Section -->
-        <section>
-            <h2>Experience</h2>
-            <div class="grid">
-                <!-- <!--[cite: 1] --> -->
-                <div class="card">
-                    <h3>Lead Software Engineer</h3>
-                    <div class="company">InverseAI — Dhaka</div>
-                    <ul>
-                        <li>Led the ground-up development of a core cross-platform video editing engine for iOS & Android.</li>
-                        <li>Utilized hardware GPU acceleration to significantly boost video encoding and decoding speeds.</li>
-                        <li>Optimized multithreading architecture to allow concurrent assets execution and seamless synchronized playback.</li>
-                        <li>Built low-level media filters and collage modules using OpenGL, FFmpeg, and JNI.</li>
-                        <li>Maintained app ecosystem health by keeping crash and ANR rates minimized.</li>
-                    </ul>
-                </div>
-                <!-- <!--[cite: 1] --> -->
-                <div class="card">
-                    <h3>Software Engineer (Android)</h3>
-                    <div class="company">InverseAI — Sylhet</div>
-                    <ul>
-                        <li>Enhanced stability of legacy multimedia applications by identifying core memory leaks and processing bottlenecks.</li>
-                        <li>Engineered advanced seeking mechanisms improving accuracy during fast and slow bi-directional frame previews.</li>
-                        <li>Designed modular, reusable native UI components reducing architectural redundancies.</li>
-                        <li>Collaborated with QA teams to analyze crash console feedback and build high-coverage test cases.</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
-        <!-- Algorithmic Profile Section -->
-        <section>
-            <h2>Competitive Programming</h2>
-            <!-- <!--[cite: 1] --> -->
-            <div class="card">
-                <div class="cp-metric">
-                    <span class="cp-platform">Total Solved Problems</span>
-                    <span class="cp-stat">5,000+ Verified Solutions</span>
-                </div>
-                <div class="cp-metric">
-                    <span class="cp-platform">LeetCode Standing</span>
-                    <span class="cp-stat">Rating: 2232 (Top 1% Globally)</span>
-                </div>
-                <div class="cp-metric">
-                    <span class="cp-platform">CodeChef Tier</span>
-                    <span class="cp-stat">5-Star Coder (Max 2123)</span>
-                </div>
-                <div class="cp-metric">
-                    <span class="cp-platform">Codeforces Tier</span>
-                    <span class="cp-stat">Expert (Max 1770)</span>
-                </div>
-                <div class="cp-metric">
-                    <span class="cp-platform">Onsite Contests</span>
-                    <span class="cp-stat">9 National Level Appearances</span>
-                </div>
-            </div>
-        </section>
-
-        <!-- Skillset Architecture Section -->
-        <section>
-            <h2>Technical Stack</h2>
-            <!-- <!--[cite: 1] --> -->
-            <div class="skills-container">
-                <div class="skill-tag">C++</div>
-                <div class="skill-tag">Kotlin</div>
-                <div class="skill-tag">Swift</div>
-                <div class="skill-tag">Java</div>
-                <div class="skill-tag">FFmpeg</div>
-                <div class="skill-tag">OpenGL</div>
-                <div class="skill-tag">JNI</div>
-                <div class="skill-tag">CMake</div>
-                <div class="skill-tag">Jetpack Compose</div>
-                <div class="skill-tag">SwiftUI</div>
-                <div class="skill-tag">KMM</div>
-                <div class="skill-tag">MVVM / MVC</div>
-            </div>
-        </section>
-
-        <!-- Contact Section -->
-        <section>
-            <h2>Connect</h2>
-            <p>I am always open to discussing low-level mobile architectures, high-performance systems optimization, or algorithmic engineering logic.</p>
-            <!-- <!--[cite: 1] --> -->
-            <div class="social-links">
-                <a href="https://www.linkedin.com/in/nasif-imtiaj/" target="_blank">
-                    <img src="https://api.iconify.design/logos:linkedin-icon.svg" alt="LinkedIn">
-                </a>
-                <a href="mailto:nasifimtiaj.16@gmail.com" target="_blank">
-                    <img src="https://api.iconify.design/logos:google-gmail.svg" alt="Gmail">
-                </a>
-            </div>
-        </section>
+<!-- ════════════ HERO ════════════ -->
+<div class="hero">
+  <div class="hero-left">
+    <h1 class="f1">Nasif Imtiaj</h1>
+    <div class="hero-roles f2">
+      <span class="role-chip blue">Software Engineer</span>
+      <span class="role-chip teal">Mobile Engineer</span>
     </div>
+    <p class="hero-desc f3">
+      Building <strong>high-performance mobile systems</strong> with hardware-accelerated video, cross-platform engines, and <strong>low-level media processing</strong>. 4+ years of industry experience delivering production-grade Android &amp; iOS applications.
+    </p>
+    <div class="hero-actions f4">
+      <a href="mailto:nasifimtiaj.16@gmail.com" class="btn btn-primary">Get in touch</a>
+      <a href="assets/Nasif-Imtiaj-CV.pdf" class="btn btn-secondary" download>Download CV</a>
+      <a href="https://github.com/nasif-imtiaj" class="btn btn-secondary" target="_blank">GitHub</a>
+      <a href="https://linkedin.com/in/nasif-imtiaj" class="btn btn-secondary" target="_blank">LinkedIn</a>
+    </div>
+    <div class="hero-stats f5">
+      <div><span class="stat-num">4+</span><span class="stat-label">Years Experience</span></div>
+      <div><span class="stat-num">5000+</span><span class="stat-label">Problems Solved</span></div>
+      <div><span class="stat-num">👑</span><span class="stat-label">Team Lead</span></div>
+    </div>
+  </div>
 
+  <div class="hero-right f3">
+    <div class="hero-card">
+      <div class="hero-card-header">
+        <span class="hc-dot hc-red"></span>
+        <span class="hc-dot hc-yellow"></span>
+        <span class="hc-dot hc-green"></span>
+        <span class="hero-card-title">whoami.py</span>
+      </div>
+      <div class="hero-card-body">
+        <div><span class="c-gray"># Developer profile</span></div>
+        <div>&nbsp;</div>
+        <div><span class="c-blue">name</span>     = <span class="c-yellow">"Nasif Imtiaj"</span></div>
+        <div><span class="c-blue">roles</span>    = <span class="c-purple">[</span><span class="c-yellow">"Software Eng."</span>, <span class="c-yellow">"Mobile Eng."</span><span class="c-purple">]</span></div>
+        <div><span class="c-blue">location</span> = <span class="c-yellow">"Dhaka, BD"</span></div>
+        <div><span class="c-blue">stack</span>    = <span class="c-purple">[</span><span class="c-green">"Kotlin"</span>, <span class="c-green">"C++"</span><span class="c-purple">]</span></div>
+        <div><span class="c-blue">cp_solved</span>= <span class="c-yellow">5000</span><span class="c-green"> # problems</span></div>
+        <div>&nbsp;</div>
+        <div><span class="c-gray"># ✓ Ready to contribute</span></div>
+      </div>
+    </div>
+    <div class="hero-info-grid">
+      <div class="info-card">
+        <div class="info-icon ii-blue">📱</div>
+        <div><div class="info-num">Android</div><div class="info-label">Kotlin · KMM</div></div>
+      </div>
+      <div class="info-card">
+        <div class="info-icon ii-teal">⚙️</div>
+        <div><div class="info-num">Native</div><div class="info-label">C++ · Multithreading</div></div>
+      </div>
+      <div class="info-card">
+        <div class="info-icon ii-amber">🎬</div>
+        <div><div class="info-num">Media</div><div class="info-label">FFmpeg · OpenGL</div></div>
+      </div>
+      <div class="info-card">
+        <div class="info-icon ii-gray">🎥</div>
+        <div><div class="info-num">Video Eng.</div><div class="info-label">Encode · Decode</div></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ════════════ ABOUT ════════════ -->
+<div class="section-wrap">
+  <section id="about">
+    <div class="section-label">About</div>
+    <div class="section-title">Who I am</div>
+    <div class="about-layout">
+      <div class="about-text">
+        <p>
+          I'm a <strong>Software &amp; Mobile Engineer</strong> with 4+ years of experience building production-grade cross-platform mobile applications. I specialise in <strong>low-level media systems</strong>, GPU-accelerated video processing, and delivering fluid, high-performance user experiences on both Android and iOS.
+        </p>
+        <p>
+          My core focus is <strong>hardware-accelerated video engineering</strong> — building encoding/decoding engines, real-time OpenGL filters, collage modules, and FFmpeg/JNI pipelines. On the product side I've led the ground-up development of a <strong>cross-platform video editing engine</strong> used in production across iOS and Android.
+        </p>
+        <p>
+          Beyond my work, I am a dedicated competitive programmer, having solved <strong>5000+ algorithmic problems</strong> and participated in multiple national and online contests. My passion for problem-solving drives me to take ownership, solve complex challenges, and continuously improve products.
+        </p>
+      </div>
+      <div>
+        <div class="sidebar-card">
+          <div class="sidebar-card-title">Languages</div>
+          <div class="lang-item">
+            <span class="lang-name">Bengali</span>
+            <span class="lang-badge">Native</span>
+          </div>
+          <div class="lang-item">
+            <span class="lang-name">English</span>
+            <span class="lang-badge">Fluent</span>
+          </div>
+        </div>
+        <div class="sidebar-card">
+          <div class="sidebar-card-title">Interests</div>
+          <div class="interest-tags">
+            <span class="itag">Mobile Engineering</span>
+            <span class="itag">Video Processing</span>
+            <span class="itag">Competitive Programming</span>
+            <span class="itag">Cross-platform Dev</span>
+            <span class="itag">Low-level Systems</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ════════════ SKILLS ════════════ -->
+<div class="section-wrap">
+  <section id="skills">
+    <div class="section-label">Expertise</div>
+    <div class="section-title">Technical skills</div>
+    <div class="skills-grid">
+
+      <!-- Primary wide skill card -->
+      <div class="skill-card wide">
+        <div class="skill-card-header">
+          <div class="skill-icon si-blue">📱</div>
+          <div class="skill-card-title">Mobile Development</div>
+        </div>
+        <div class="tag-list">
+          <span class="tag primary">Kotlin</span>
+          <span class="tag primary">Swift</span>
+          <span class="tag primary">Jetpack Compose</span>
+          <span class="tag primary">SwiftUI</span>
+          <span class="tag primary">KMM</span>
+          <span class="tag">Coroutines</span>
+          <span class="tag">UIKit</span>
+          <span class="tag">MVVM</span>
+          <span class="tag">MVC</span>
+          <span class="tag">Android SDK</span>
+          <span class="tag">iOS SDK</span>
+        </div>
+      </div>
+
+      <!-- Languages & Frameworks -->
+      <div class="skill-card">
+        <div class="skill-card-header">
+          <div class="skill-icon si-teal">⌨️</div>
+          <div class="skill-card-title">Languages &amp; Native</div>
+        </div>
+        <div class="tag-list">
+          <span class="tag teal-tag">C++</span>
+          <span class="tag teal-tag">Java</span>
+          <span class="tag teal-tag">Kotlin</span>
+          <span class="tag teal-tag">Swift</span>
+          <span class="tag teal-tag">Python</span>
+          <span class="tag">JNI</span>
+          <span class="tag">CMake</span>
+          <span class="tag">FFmpeg</span>
+          <span class="tag">OpenGL ES</span>
+        </div>
+      </div>
+
+      <!-- Tools & DevOps -->
+      <div class="skill-card">
+        <div class="skill-card-header">
+          <div class="skill-icon si-amber">🛠️</div>
+          <div class="skill-card-title">Tools &amp; Workflow</div>
+        </div>
+        <div class="tag-list">
+          <span class="tag amber-tag">Android Studio</span>
+          <span class="tag amber-tag">Xcode</span>
+          <span class="tag amber-tag">Git</span>
+          <span class="tag amber-tag">GitHub</span>
+          <span class="tag">Gradle</span>
+          <span class="tag">CMake</span>
+          <span class="tag">Firebase</span>
+          <span class="tag">SDL</span>
+          <span class="tag">Jira</span>
+          <span class="tag">Crashlytics</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+</div>
+
+<!-- ════════════ EXPERIENCE ════════════ -->
+<div class="section-wrap">
+  <section id="experience">
+    <div class="section-label">Career</div>
+    <div class="section-title">Work experience</div>
+    <div class="exp-list">
+
+      <div class="exp-card">
+        <div class="exp-meta">
+          <div class="exp-period">Sep 2023 – Present</div>
+          <div class="exp-location">📍 Dhaka, Bangladesh</div>
+          <div class="exp-type-badge">Full-time</div>
+        </div>
+        <div class="exp-content">
+          <div class="exp-role">Lead Software Engineer</div>
+          <div class="exp-company-row">
+            <span class="exp-company">InverseAI</span>
+            <a href="#" class="exp-company-link" target="_blank" title="Visit InverseAI">↗</a>
+          </div>
+          <ul class="exp-bullets">
+            <li>Led the development of a video editor app from the ground up, designing an extensible codebase for Android and iOS to support feature expansion and making key decisions on feature development, design and release timelines for a successful launch.</li>
+            <li>Utilized GPU resources to boost decoding and encoding speed by approximately <strong>50%</strong>.</li>
+            <li>Improved the multithreading structure to allow users to add multiple videos at once, providing a dynamic user experience.</li>
+            <li>Built core features such as Filter and Adjust using OpenGL and FFmpeg through in-depth research and optimizations to provide faster rendering for <strong>2K resolution</strong> and <strong>60 fps</strong> videos.</li>
+            <li>Built a multi-video collage module capable of handling up to <strong>4 videos</strong> with synchronized playback.</li>
+            <li>Strengthened overall app quality and Play Store performance by keeping crash and ANR rates well within Google's required thresholds.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="exp-card">
+        <div class="exp-meta">
+          <div class="exp-period">Sep 2021 – Aug 2023</div>
+          <div class="exp-location">📍 Sylhet, Bangladesh</div>
+          <div class="exp-type-badge">Full-time</div>
+        </div>
+        <div class="exp-content">
+          <div class="exp-role">Software Engineer (Android)</div>
+          <div class="exp-company-row">
+            <span class="exp-company">InverseAI</span>
+            <a href="#" class="exp-company-link" target="_blank" title="Visit InverseAI">↗</a>
+          </div>
+          <ul class="exp-bullets">
+            <li>Enhanced the performance and stability of legacy apps by optimizing compression commands, resolving crashes &amp; ANRs, and conducting code reviews, leading to a <strong>4× increase</strong> in in-app purchase revenue.</li>
+            <li>Analyzed key customer issues by collaborating with the testing team, reviewing console feedback and bug reports to build test cases that reduced overall complaints by <strong>10%</strong>.</li>
+            <li>Engineered a new seeking mechanism for the Video Editor app that improved accuracy by <strong>20%</strong> and innovated bi-directional slow seeking with precise preview functionality.</li>
+            <li>Architected and optimized efficient multithreaded systems to ensure flawless asynchronous execution in highly concurrent operations.</li>
+            <li>Developed the photo collage feature using the <strong>DSU algorithm</strong>, enabling customizable layout arrangements supporting up to <strong>10 pictures</strong> at once.</li>
+            <li>Modularized reusable components of existing projects to reduce coding redundancy, improving reliability and maintenance.</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </section>
+</div>
+
+<!-- ════════════ PROJECTS ════════════ -->
+<div class="section-wrap">
+  <section id="projects">
+    <div class="section-header-row">
+      <div>
+        <div class="section-label">Portfolio</div>
+        <div class="section-title" style="margin-bottom:0">Projects</div>
+      </div>
+      <a href="https://github.com/nasif-imtiaj" class="btn btn-secondary" target="_blank" style="font-size:13px;">View all on GitHub →</a>
+    </div>
+    <div class="projects-grid" style="grid-template-columns: repeat(1, 1fr); max-width: 560px;">
+
+      <a href="https://github.com/Nasif-Imtiaj/Teacher-s-Assistant" class="project-card featured" target="_blank">
+        <div class="project-top">
+          <div class="project-icon">🎓</div>
+          <span class="project-link-icon">↗</span>
+        </div>
+        <div class="project-name">Teacher's Assistant</div>
+        <div class="project-desc">Android app where students submit answer scripts digitally and teachers evaluate them and generate mark lists — streamlining the assessment workflow end-to-end.</div>
+        <div class="project-tags">
+          <span class="ptag">Kotlin</span>
+          <span class="ptag">Java</span>
+          <span class="ptag">MVVM</span>
+          <span class="ptag">Firebase</span>
+          <span class="ptag">XML</span>
+          <span class="ptag">Android</span>
+        </div>
+      </a>
+
+    </div>
+  </section>
+</div>
+
+<!-- ════════════ EDUCATION ════════════ -->
+<div class="section-wrap">
+  <section id="education">
+    <div class="section-label">Academic background</div>
+    <div class="section-title">Education</div>
+    <div class="edu-grid" style="grid-template-columns: repeat(1, 1fr); max-width: 420px;">
+
+      <div class="edu-card">
+        <span class="edu-flag">🇧🇩</span>
+        <div class="edu-degree">B.Sc. in Computer Science &amp; Engineering</div>
+        <div class="edu-school">Metropolitan University · Sylhet, Bangladesh</div>
+        <div class="edu-period">Jan 2018 — Sep 2022</div>
+        <div style="margin-top:0.6rem; font-size:12px; font-weight:600; color:var(--teal);">CGPA: 3.67 / 4.00</div>
+      </div>
+
+    </div>
+  </section>
+</div>
+
+<!-- ════════════ ACHIEVEMENT ════════════ -->
+<div class="section-wrap">
+  <section id="achievement">
+    <div class="section-label">Recognition</div>
+    <div class="section-title">Achievement</div>
+    <div style="display:flex; flex-direction:column; gap:1rem;">
+
+      <div class="achievement-card">
+        <div class="achievement-icon-wrap">🏆</div>
+        <div style="flex:1">
+          <div class="achievement-top">
+            <div class="achievement-title">Champion — Intra Metropolitan University Junior Programming Contest</div>
+            <span class="achievement-badge">1st Place</span>
+          </div>
+          <div class="achievement-sub">Metropolitan University · Spring 2019 · Sylhet, Bangladesh</div>
+          <div class="achievement-desc">
+            Won first place at the intra-university junior programming contest, outcompeting peers in algorithmic problem solving under time constraints.
+          </div>
+          <a href="https://toph.co/c/intra-mu-junior-spring-2019/standings" class="achievement-link" target="_blank">Standings ↗</a>
+        </div>
+      </div>
+
+      <div class="achievement-card">
+        <div class="achievement-icon-wrap">🥇</div>
+        <div style="flex:1">
+          <div class="achievement-top">
+            <div class="achievement-title">Top Performer — InverseAI</div>
+            <span class="achievement-badge">2022 &amp; 2023</span>
+          </div>
+          <div class="achievement-sub">InverseAI · 2022 &amp; 2023 · Dhaka, Bangladesh</div>
+          <div class="achievement-desc">
+            Recognized as a top performer for two consecutive years for outstanding contributions to mobile video engineering, including the ground-up build of a cross-platform video editing engine.
+          </div>
+          <div class="achievement-links">
+            <a href="https://www.linkedin.com/posts/inverse-ai_congratulations-topperformers-profitsharing-activity-7026847256158896128-IwQj/" class="achievement-link" target="_blank">2022 ↗</a>
+            <a href="https://drive.google.com/file/d/1XeCXdhx-0fzW2f-8bhC35fJv8a1OlrK4/view" class="achievement-link" target="_blank">2023 ↗</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="achievement-card">
+        <div class="achievement-icon-wrap">🎯</div>
+        <div style="flex:1">
+          <div class="achievement-top">
+            <div class="achievement-title">35th of 150 Teams — National Collegiate Programming Contest 2020</div>
+            <span class="achievement-badge">National · NCPC 2020</span>
+          </div>
+          <div class="achievement-sub">Team: MU_Inferno · MIST NCPC 2020</div>
+          <div class="achievement-desc">
+            Placed 35th among 150 teams nationally. Also competed at LU CSE Carnival 2019 (22nd/65), SUST IUPC 2019 (27th/161), and BUET CSE Fest 2022 (38th/114).
+          </div>
+          <div style="display:flex; flex-wrap:wrap; gap:0.5rem; margin-top:0.6rem;">
+            <a href="https://algo.codemarshal.org/contests/mist-ncpc-2020/standings" class="achievement-link" target="_blank">NCPC 2020 ↗</a>
+            <a href="https://toph.co/c/lu-cse-carnival-iupc-2019/standings" class="achievement-link" target="_blank">LU CSE Carnival ↗</a>
+            <a href="https://toph.co/c/sust-iupc-2019/standings" class="achievement-link" target="_blank">SUST IUPC ↗</a>
+            <a href="https://toph.co/c/buet-inter-university-2022/standings" class="achievement-link" target="_blank">BUET CSE Fest ↗</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+</div>
+
+<!-- ════════════ COMPETITIVE PROGRAMMING ════════════ -->
+<div class="section-wrap">
+  <section id="competitive">
+    <div class="section-label">Algorithms</div>
+    <div class="section-title">Competitive programming</div>
+    <div class="cp-grid">
+      <div class="cp-stat-card">
+        <div class="cp-stat-icon">⚡</div>
+        <div>
+          <div class="cp-stat-num">5000+</div>
+          <div class="cp-stat-label">Programming problems solved across online judges</div>
+        </div>
+      </div>
+      <div class="cp-stat-card">
+        <div class="cp-stat-icon">🖥️</div>
+        <div>
+          <div class="cp-stat-num">390</div>
+          <div class="cp-stat-label">Online contests attended across all platforms</div>
+        </div>
+      </div>
+      <div class="cp-stat-card">
+        <div class="cp-stat-icon">🏅</div>
+        <div>
+          <div class="cp-stat-num">9</div>
+          <div class="cp-stat-label">National-level onsite contest appearances</div>
+        </div>
+      </div>
+    </div>
+    <div class="cp-platforms">
+
+      <a href="https://codeforces.com/profile/Nasif_44th" class="cp-platform" target="_blank">
+        <div class="cp-left">
+          <div class="cp-header">
+            <img src="https://codeforces.org/s/0/favicon-32x32.png" alt="Codeforces" class="cp-icon">
+            <span class="cp-name">Codeforces</span>
+          </div>
+          <div class="cp-handle">Nasif_44th</div>
+        </div>
+        <div class="cp-stats">
+          <div class="cp-stat-row"><span class="cp-stat-lbl">Contests</span><span class="cp-stat-val">245</span></div>
+          <div class="cp-stat-row"><span class="cp-stat-lbl">Rating</span><span class="cp-stat-val">1770 <span class="cp-grade blue">Expert</span></span></div>
+          <div class="cp-stat-row"><span class="cp-stat-lbl">Solved</span><span class="cp-stat-val">2480</span></div>
+        </div>
+      </a>
+
+      <a href="https://leetcode.com/u/Nasif_44th/" class="cp-platform" target="_blank">
+        <div class="cp-left">
+          <div class="cp-header">
+            <img src="https://assets.leetcode.com/static_assets/public/icons/favicon-32x32.png" alt="LeetCode" class="cp-icon">
+            <span class="cp-name">LeetCode</span>
+          </div>
+          <div class="cp-handle">Nasif_44th</div>
+        </div>
+        <div class="cp-stats">
+          <div class="cp-stat-row"><span class="cp-stat-lbl">Contests</span><span class="cp-stat-val">48</span></div>
+          <div class="cp-stat-row"><span class="cp-stat-lbl">Rating</span><span class="cp-stat-val">2232 <span class="cp-grade purple">Guardian</span></span></div>
+          <div class="cp-stat-row"><span class="cp-stat-lbl">Solved</span><span class="cp-stat-val">994</span></div>
+        </div>
+      </a>
+
+      <a href="https://www.codechef.com/users/nasif_44th" class="cp-platform" target="_blank">
+        <div class="cp-left">
+          <div class="cp-header">
+            <img src="https://www.codechef.com/favicon.ico" alt="CodeChef" class="cp-icon">
+            <span class="cp-name">CodeChef</span>
+          </div>
+          <div class="cp-handle">nasif_44th</div>
+        </div>
+        <div class="cp-stats">
+          <div class="cp-stat-row"><span class="cp-stat-lbl">Contests</span><span class="cp-stat-val">33</span></div>
+          <div class="cp-stat-row"><span class="cp-stat-lbl">Rating</span><span class="cp-stat-val">2123 <span class="cp-grade gold">5★</span></span></div>
+          <div class="cp-stat-row"><span class="cp-stat-lbl">Solved</span><span class="cp-stat-val">199</span></div>
+        </div>
+      </a>
+
+      <a href="https://lightoj.com/user/nasifimtiaj-" class="cp-platform" target="_blank">
+        <div class="cp-left">
+          <div class="cp-header">
+            <img src="https://lightoj.com/favicon.ico" alt="LightOJ" class="cp-icon">
+            <span class="cp-name">LightOJ</span>
+          </div>
+          <div class="cp-handle">nasifimtiaj-</div>
+        </div>
+        <div class="cp-stats">
+          <div class="cp-stat-row cp-stat-spacer"></div>
+          <div class="cp-stat-row cp-stat-spacer"></div>
+          <div class="cp-stat-row"><span class="cp-stat-lbl">Solved</span><span class="cp-stat-val">158</span></div>
+        </div>
+      </a>
+
+      <a href="https://toph.co/u/Nasif_44th" class="cp-platform" target="_blank">
+        <div class="cp-left">
+          <div class="cp-header">
+            <img src="https://toph.co/favicon.ico" alt="Toph" class="cp-icon">
+            <span class="cp-name">Toph</span>
+          </div>
+          <div class="cp-handle">Nasif_44th</div>
+        </div>
+        <div class="cp-stats">
+          <div class="cp-stat-row"><span class="cp-stat-lbl">Contests</span><span class="cp-stat-val">31</span></div>
+          <div class="cp-stat-row"><span class="cp-stat-lbl">Rating</span><span class="cp-stat-val">1833</span></div>
+          <div class="cp-stat-row"><span class="cp-stat-lbl">Solved</span><span class="cp-stat-val">318</span></div>
+        </div>
+      </a>
+
+      <a href="https://atcoder.jp/users/Nasif_44th" class="cp-platform" target="_blank">
+        <div class="cp-left">
+          <div class="cp-header">
+            <img src="https://img.atcoder.jp/assets/favicon.png" alt="AtCoder" class="cp-icon">
+            <span class="cp-name">AtCoder</span>
+          </div>
+          <div class="cp-handle">Nasif_44th</div>
+        </div>
+        <div class="cp-stats">
+          <div class="cp-stat-row"><span class="cp-stat-lbl">Contests</span><span class="cp-stat-val">33</span></div>
+          <div class="cp-stat-row"><span class="cp-stat-lbl">Rating</span><span class="cp-stat-val">1436 <span class="cp-grade cyan">3 Kyu</span></span></div>
+          <div class="cp-stat-row"><span class="cp-stat-lbl">Solved</span><span class="cp-stat-val">706</span></div>
+        </div>
+      </a>
+
+      <a href="https://uhunt.onlinejudge.org/id/964513" class="cp-platform" target="_blank">
+        <div class="cp-left">
+          <div class="cp-header">
+            <img src="https://uhunt.onlinejudge.org/images/uva-rounded.png" alt="UVA OJ" class="cp-icon">
+            <span class="cp-name">UVA OJ</span>
+          </div>
+          <div class="cp-handle">Nasif_44th</div>
+        </div>
+        <div class="cp-stats">
+          <div class="cp-stat-row cp-stat-spacer"></div>
+          <div class="cp-stat-row cp-stat-spacer"></div>
+          <div class="cp-stat-row"><span class="cp-stat-lbl">Solved</span><span class="cp-stat-val">539</span></div>
+        </div>
+      </a>
+
+    </div>
+  </section>
+</div>
+
+<!-- ════════════ PUBLICATIONS (hidden — uncomment when you have publications) ════════════
+<div class="section-wrap">
+  <section id="publications">
+    <div class="section-label">Research</div>
+    <div class="section-title">Publications</div>
+    <div class="pub-list">
+    </div>
+  </section>
+</div>
+-->
+
+<!-- ════════════ CONTACT ════════════ -->
+<div class="section-wrap">
+  <section id="contact">
+    <div class="section-label">Let's connect</div>
+    <div class="section-title">Get in touch</div>
+    <p class="contact-intro" style="display:none">
+      I'm currently looking for <strong>full-time Software &amp; Mobile Engineer roles</strong>. Feel free to reach out!
+    </p>
+    <div class="contact-grid">
+
+      <a href="mailto:nasifimtiaj.16@gmail.com" class="contact-link">
+        <div class="cl-icon">✉</div>
+        <div class="cl-value">
+          <span class="cl-label">Email</span>
+          <span class="cl-text">nasifimtiaj.16@gmail.com</span>
+        </div>
+      </a>
+
+      <a href="https://linkedin.com/in/nasif-imtiaj" class="contact-link" target="_blank">
+        <div class="cl-icon">
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z" stroke="#374151" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <rect x="2" y="9" width="4" height="12" stroke="#374151" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <circle cx="4" cy="4" r="2" stroke="#374151" stroke-width="1.5"/>
+          </svg>
+        </div>
+        <div class="cl-value">
+          <span class="cl-label">LinkedIn</span>
+          <span class="cl-text">linkedin.com/in/nasif-imtiaj</span>
+        </div>
+      </a>
+
+      <a href="https://github.com/nasif-imtiaj" class="contact-link" target="_blank">
+        <div class="cl-icon">
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22" stroke="#374151" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <div class="cl-value">
+          <span class="cl-label">GitHub</span>
+          <span class="cl-text">github.com/nasif-imtiaj</span>
+        </div>
+      </a>
+
+      <a href="https://nasif-imtiaj.github.io" class="contact-link" target="_blank">
+        <div class="cl-icon">🌐</div>
+        <div class="cl-value">
+          <span class="cl-label">Website</span>
+          <span class="cl-text">nasif-imtiaj.github.io</span>
+        </div>
+      </a>
+
+    </div>
+  </section>
+</div>
+
+<!-- ════════════ FOOTER ════════════ -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-left">
+      <div class="footer-name">Nasif Imtiaj</div>
+      <div class="footer-tagline">Software Engineer · Mobile Engineer · Sylhet, Bangladesh</div>
+    </div>
+    <div class="footer-right">
+      <div class="footer-socials">
+        <a href="https://github.com/nasif-imtiaj" class="footer-social-btn" target="_blank" title="GitHub">
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22" stroke="#9ca3af" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </a>
+        <a href="https://linkedin.com/in/nasif-imtiaj" class="footer-social-btn" target="_blank" title="LinkedIn">
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z" stroke="#9ca3af" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <rect x="2" y="9" width="4" height="12" stroke="#9ca3af" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <circle cx="4" cy="4" r="2" stroke="#9ca3af" stroke-width="1.5"/>
+          </svg>
+        </a>
+        <a href="mailto:nasifimtiaj.16@gmail.com" class="footer-social-btn" title="Email">
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" stroke="#9ca3af" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <polyline points="22,6 12,13 2,6" stroke="#9ca3af" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span class="footer-copy">© 2026 Nasif Imtiaj · nasif-imtiaj.github.io</span>
+  </div>
+</footer>
+
+<script src="assets/js/main.js"></script>
 </body>
 </html>
