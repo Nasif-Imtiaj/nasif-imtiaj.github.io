@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nasif Imtiaj | Lead Software Engineer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #0d1117;
+            --text-main: #f0f6fc;
+            --text-muted: #8b949e;
+            --accent: #58a6ff;
+            --card-bg: #161b22;
+            --border-color: #30363d;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            padding: 0 20px;
+        }
+
+        .container {
+            max-width: 850px;
+            margin: 0 auto;
+            padding: 80px 0;
+        }
+
+        header {
+            margin-bottom: 60px;
+        }
+
+        h1 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            letter-spacing: -0.03em;
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            color: var(--accent);
+            font-weight: 500;
+            margin-bottom: 20px;
+        }
+
+        p {
+            color: var(--text-muted);
+            font-size: 1.05rem;
+            max-width: 700px;
+        }
+
+        section {
+            margin-bottom: 50px;
+        }
+
+        h2 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.6rem;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 8px;
+            margin-bottom: 25px;
+            letter-spacing: -0.02em;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        @media (max-width: 600px) {
+            .grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 24px;
+            transition: transform 0.2s ease, border-color 0.2s ease;
+        }
+
+        .card:hover {
+            border-color: var(--accent);
+        }
+
+        .card h3 {
+            font-size: 1.15rem;
+            margin-bottom: 5px;
+        }
+
+        .card .company {
+            font-size: 0.95rem;
+            color: var(--accent);
+            margin-bottom: 12px;
+            font-weight: 500;
+        }
+
+        .card ul {
+            list-style-type: none;
+        }
+
+        .card ul li {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            margin-bottom: 8px;
+            position: relative;
+            padding-left: 15px;
+        }
+
+        .card ul li::before {
+            content: "•";
+            color: var(--accent);
+            position: absolute;
+            left: 0;
+        }
+
+        .skills-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .skill-tag {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            color: var(--text-main);
+        }
+
+        .cp-metric {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px 0;
+            border-bottom: 1px dashed var(--border-color);
+        }
+
+        .cp-metric:last-child {
+            border-bottom: none;
+        }
+
+        .cp-platform {
+            font-weight: 500;
+        }
+
+        .cp-stat {
+            color: var(--accent);
+            font-weight: 600;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 20px;
+            margin-top: 25px;
+        }
+
+        .social-links a {
+            display: inline-flex;
+            align-items: center;
+            text-decoration: none;
+            transition: opacity 0.2s;
+        }
+
+        .social-links a:hover {
+            opacity: 0.8;
+        }
+
+        .social-links img {
+            width: 32px;
+            height: 32px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Hero Section -->
+        <header>
+            <h1>Nasif Imtiaj</h1>
+            <!-- <!--[cite: 1] --> -->
+            <div class="subtitle">Lead Software Engineer & Mobile Systems Developer</div>
+            <!-- <!--[cite: 1] --> -->
+            <p>Focused on building highly optimized cross-platform mobile applications, low-level media processing engines, and fluid user experiences. Bridging complex mathematical logic with practical, production-ready systems.</p>
+        </header>
+
+        <!-- Professional Experience Section -->
+        <section>
+            <h2>Experience</h2>
+            <div class="grid">
+                <!-- <!--[cite: 1] --> -->
+                <div class="card">
+                    <h3>Lead Software Engineer</h3>
+                    <div class="company">InverseAI — Dhaka</div>
+                    <ul>
+                        <li>Led the ground-up development of a core cross-platform video editing engine for iOS & Android.</li>
+                        <li>Utilized hardware GPU acceleration to significantly boost video encoding and decoding speeds.</li>
+                        <li>Optimized multithreading architecture to allow concurrent assets execution and seamless synchronized playback.</li>
+                        <li>Built low-level media filters and collage modules using OpenGL, FFmpeg, and JNI.</li>
+                        <li>Maintained app ecosystem health by keeping crash and ANR rates minimized.</li>
+                    </ul>
+                </div>
+                <!-- <!--[cite: 1] --> -->
+                <div class="card">
+                    <h3>Software Engineer (Android)</h3>
+                    <div class="company">InverseAI — Sylhet</div>
+                    <ul>
+                        <li>Enhanced stability of legacy multimedia applications by identifying core memory leaks and processing bottlenecks.</li>
+                        <li>Engineered advanced seeking mechanisms improving accuracy during fast and slow bi-directional frame previews.</li>
+                        <li>Designed modular, reusable native UI components reducing architectural redundancies.</li>
+                        <li>Collaborated with QA teams to analyze crash console feedback and build high-coverage test cases.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Algorithmic Profile Section -->
+        <section>
+            <h2>Competitive Programming</h2>
+            <!-- <!--[cite: 1] --> -->
+            <div class="card">
+                <div class="cp-metric">
+                    <span class="cp-platform">Total Solved Problems</span>
+                    <span class="cp-stat">5,000+ Verified Solutions</span>
+                </div>
+                <div class="cp-metric">
+                    <span class="cp-platform">LeetCode Standing</span>
+                    <span class="cp-stat">Rating: 2232 (Top 1% Globally)</span>
+                </div>
+                <div class="cp-metric">
+                    <span class="cp-platform">CodeChef Tier</span>
+                    <span class="cp-stat">5-Star Coder (Max 2123)</span>
+                </div>
+                <div class="cp-metric">
+                    <span class="cp-platform">Codeforces Tier</span>
+                    <span class="cp-stat">Expert (Max 1770)</span>
+                </div>
+                <div class="cp-metric">
+                    <span class="cp-platform">Onsite Contests</span>
+                    <span class="cp-stat">9 National Level Appearances</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skillset Architecture Section -->
+        <section>
+            <h2>Technical Stack</h2>
+            <!-- <!--[cite: 1] --> -->
+            <div class="skills-container">
+                <div class="skill-tag">C++</div>
+                <div class="skill-tag">Kotlin</div>
+                <div class="skill-tag">Swift</div>
+                <div class="skill-tag">Java</div>
+                <div class="skill-tag">FFmpeg</div>
+                <div class="skill-tag">OpenGL</div>
+                <div class="skill-tag">JNI</div>
+                <div class="skill-tag">CMake</div>
+                <div class="skill-tag">Jetpack Compose</div>
+                <div class="skill-tag">SwiftUI</div>
+                <div class="skill-tag">KMM</div>
+                <div class="skill-tag">MVVM / MVC</div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section>
+            <h2>Connect</h2>
+            <p>I am always open to discussing low-level mobile architectures, high-performance systems optimization, or algorithmic engineering logic.</p>
+            <!-- <!--[cite: 1] --> -->
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/nasif-imtiaj/" target="_blank">
+                    <img src="https://api.iconify.design/logos:linkedin-icon.svg" alt="LinkedIn">
+                </a>
+                <a href="mailto:nasifimtiaj.16@gmail.com" target="_blank">
+                    <img src="https://api.iconify.design/logos:google-gmail.svg" alt="Gmail">
+                </a>
+            </div>
+        </section>
+    </div>
+
+</body>
+</html>
