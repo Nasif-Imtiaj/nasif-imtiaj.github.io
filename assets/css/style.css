@@ -27,7 +27,7 @@
   --shadow-lg: 0 10px 15px rgba(0,0,0,0.07), 0 4px 6px rgba(0,0,0,0.05);
 }
 
-html { scroll-behavior: smooth; scroll-padding-top: 64px; }
+html { scroll-behavior: smooth; scroll-padding-top: 64px; overflow-x: hidden; }
 
 body {
   background: var(--bg);
@@ -36,6 +36,7 @@ body {
   font-size: 14px;
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
 }
 
 /* ── NAV ── */
@@ -695,6 +696,11 @@ footer {
 @media(max-width:1050px){
   .nav-links a { font-size: 12px; padding: 0.35rem 0.5rem; }
 }
+@media(max-width:400px){
+  .nav-logo { font-size: 0.88rem; }
+  .nav-logo-ext { font-size: 0.82rem; }
+  .nav-inner { padding: 0 0.75rem; }
+}
 @media(max-width:900px){
   .nav-hamburger { display: flex; }
   .nav-links {
@@ -721,7 +727,7 @@ footer {
   .projects-grid { grid-template-columns: 1fr; }
   .exp-card { grid-template-columns: 1fr; gap: 0.75rem; }
   .edu-grid { grid-template-columns: 1fr; }
-  .cp-grid { grid-template-columns: repeat(2, 1fr); }
+  .cp-grid { grid-template-columns: 1fr; }
   .cp-stat-card.full { grid-column: 1; }
   .cp-platforms { grid-template-columns: 1fr; }
   .contact-grid { grid-template-columns: 1fr; }
