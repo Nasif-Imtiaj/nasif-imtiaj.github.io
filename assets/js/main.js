@@ -98,6 +98,9 @@ if (projectModal) {
     card.addEventListener('keydown', (e) => {
       if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openProjectModal(card); }
     });
+    // corner store link opens the store directly, not the modal
+    const storeLink = card.querySelector('.project-store');
+    if (storeLink) storeLink.addEventListener('click', (e) => e.stopPropagation());
   });
   modalCloseBtn.addEventListener('click', closeProjectModal);
   projectModal.addEventListener('click', (e) => { if (e.target === projectModal) closeProjectModal(); });
