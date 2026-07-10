@@ -800,3 +800,21 @@ footer {
   .footer-bottom { flex-direction: column; align-items: flex-start; }
   .achievement-top { flex-direction: column; gap: 0.5rem; }
 }
+
+/* Respect users who prefer reduced motion — show content instantly, no motion */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation: none !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Skip link (keyboard/screen-reader navigation) */
+.skip-link {
+  position: absolute; left: 12px; top: -48px; z-index: 300;
+  background: var(--accent); color: #fff; padding: 10px 16px;
+  border-radius: 8px; font-size: 14px; font-weight: 600; text-decoration: none;
+  transition: top .15s;
+}
+.skip-link:focus { top: 12px; }

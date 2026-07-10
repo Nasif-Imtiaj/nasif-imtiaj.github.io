@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://nasif-imtiaj.github.io/sitemap.xml
